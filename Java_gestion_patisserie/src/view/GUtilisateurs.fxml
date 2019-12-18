@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1350.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GUtilisateursController">
+   <children>
+      <Label layoutX="531.0" layoutY="53.0" text="Gestion des emloyées" />
+      <Button layoutX="126.0" layoutY="342.0" mnemonicParsing="false" onAction="#buttonAjouter" prefHeight="35.0" prefWidth="128.0" text="Ajouter" />
+      <Button layoutX="273.0" layoutY="342.0" mnemonicParsing="false" onAction="#buttonActualiser" prefHeight="35.0" prefWidth="128.0" text="Actualiser" />
+      <Button layoutX="423.0" layoutY="342.0" mnemonicParsing="false" onAction="#buttonSupprimer" prefHeight="35.0" prefWidth="128.0" text="Supprimer" />
+      <Pane layoutX="126.0" layoutY="393.0" prefHeight="268.0" prefWidth="616.0" style="-fx-background-color: #F08080;">
+         <children>
+            <Label layoutX="6.0" layoutY="34.0" text="Login" />
+            <TextField fx:id="txt_Username" layoutX="106.0" layoutY="30.0" />
+            <Label layoutX="6.0" layoutY="83.0" text="Mot de passe " />
+            <TextField fx:id="txt_Password" layoutX="107.0" layoutY="84.0" />
+            <ComboBox fx:id="CB_type" layoutX="409.0" layoutY="29.0" prefHeight="32.0" prefWidth="193.0" promptText="Type" stylesheets="@style.css" />
+            <Label layoutX="330.0" layoutY="34.0" text="Type" />
+            <Label layoutX="9.0" layoutY="154.0" text="Nom" />
+            <TextField fx:id="txt_nom" layoutX="107.0" layoutY="146.0" />
+            <Label layoutX="6.0" layoutY="206.0" text="Prenom" />
+            <TextField fx:id="txt_prenom" layoutX="107.0" layoutY="198.0" />
+            <Label layoutX="330.0" layoutY="91.0" text="Email" />
+            <TextField fx:id="txt_email" layoutX="392.0" layoutY="91.0" />
+            <Label layoutX="333.0" layoutY="154.0" text="Telephone" />
+            <TextField fx:id="txt_tel" layoutX="409.0" layoutY="146.0" prefHeight="32.0" prefWidth="193.0" />
+         </children>
+      </Pane>
+      <TableView fx:id="tableview" layoutX="126.0" layoutY="84.0" onMouseClicked="#OnClick" prefHeight="234.0" prefWidth="1007.0">
+         <columns>
+            <TableColumn fx:id="Colid" prefWidth="75.0" text="Id" />
+            <TableColumn fx:id="colUserName" prefWidth="108.0" text="login" />
+            <TableColumn fx:id="colUserPass" prefWidth="114.0" text="mdp" />
+            <TableColumn fx:id="colType" minWidth="0.0" prefWidth="129.0" text="type" />
+            <TableColumn fx:id="colNom" prefWidth="114.0" text="nom" />
+            <TableColumn fx:id="colPrenom" prefWidth="121.0" text="prenom" />
+            <TableColumn fx:id="colEmail" prefWidth="210.0" text="email" />
+            <TableColumn fx:id="colTel" prefWidth="132.0" text="telephone" />
+         </columns>
+      </TableView>
+      <Button layoutX="571.0" layoutY="342.0" mnemonicParsing="false" onAction="#buttonModifier" prefHeight="35.0" prefWidth="128.0" text="Modifier" />
+      <Pane layoutX="833.0" layoutY="342.0" prefHeight="250.0" prefWidth="375.0" style="-fx-background-color: #F08080;">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="16.0" prefWidth="232.0" text="Recherche par catégorie :" />
+            <ComboBox fx:id="combo_rech" layoutX="188.0" layoutY="13.0" prefHeight="35.0" prefWidth="175.0" />
+            <Button layoutX="14.0" layoutY="90.0" mnemonicParsing="false" onAction="#ButtonRechercher" prefHeight="35.0" prefWidth="128.0" text="Rechercher" />
+            <TextField fx:id="txt_rech" layoutX="170.0" layoutY="90.0" prefHeight="35.0" prefWidth="193.0" />
+         </children>
+      </Pane>
+      <Button layoutX="1117.0" layoutY="16.0" mnemonicParsing="false" onAction="#Deconnexion" prefHeight="62.0" prefWidth="153.0" text="Deconnexion" />
+   </children>
+</AnchorPane>
